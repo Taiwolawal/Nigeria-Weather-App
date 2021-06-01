@@ -13,16 +13,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        stateSpinner = binding.stateSpinner
+        stateSpinner = binding.weatherLayoutInput.stateSpinner
         ArrayAdapter.createFromResource(this, R.array.states_list_filter, android.R.layout.simple_spinner_item)
             .also { adapter ->
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                 stateSpinner.adapter = adapter
             }
+
 
     }
 }

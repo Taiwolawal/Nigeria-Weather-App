@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">Nigeria Weather App</string>
     <string name="view_weather">View Weather</string>
+    <string name="wind">Wind: %1$d</string>
+    <string name="pressure">Pressure: %1$d</string>
+    <string name="humidity">Humidity: %1$d</string>
+    <string name="visibility">Visibility: %1$d</string>
+    <string name="dew_point">Dew point: %1$d</string>
+    <string name="uv_index">UV index: %1$d</string>
+    <string name="degree_celsius_symbol">°C</string>
+    <string name="image_weather">image_weather</string>
+    <string name="description_weather_condition_icon">weather condition icon</string>
+    <string name="weather_image">Weather Image</string>
     <string-array name="states_list_filter">
         <item>States</item>
         <item>All States</item>
