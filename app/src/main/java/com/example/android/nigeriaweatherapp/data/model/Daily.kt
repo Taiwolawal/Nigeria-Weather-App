@@ -1,8 +1,11 @@
 package com.example.android.nigeriaweatherapp.data.model
 
 
+import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
+@Entity(tableName = "daily_temperature")
 data class Daily(
     @SerializedName("clouds")
     val clouds: Int,
@@ -42,4 +45,4 @@ data class Daily(
     val windGust: Double,
     @SerializedName("wind_speed")
     val windSpeed: Double
-)
+): Serializable

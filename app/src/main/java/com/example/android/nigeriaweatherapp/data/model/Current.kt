@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Current(
     @SerializedName("clouds")
-    val clouds: Int,
+    val clouds: Int = 0,
     @SerializedName("dew_point")
     val dewPoint: Double,
     @SerializedName("dt")

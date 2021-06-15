@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:padding="8dp"
     tools:context=".MainActivity">
 
     <include
         android:id="@+id/weather_layout_input"
-        layout="@layout/layout_input_part" />
+        layout="@layout/layout_input_part"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/weather_layout_basic"
@@ -17,6 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/weather_layout_input" />
 
     <include
@@ -25,18 +30,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/weather_layout_basic" />
-
-
-<!--    <include-->
-<!--        android:id="@+id/weather_recyclerview"-->
-<!--        layout="@layout/weather_list_date"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/weather_layout_summary"-->
-<!--        tools:layout_editor_absoluteY="390dp" />-->
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -50,13 +46,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/network_unavailable"
+        android:id="@+id/day_forecast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="No internet connection" />
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="@string/_8_day_forecast"
+        app:layout_constraintStart_toStartOf="@+id/weather_layout_summary"
+        app:layout_constraintTop_toBottomOf="@+id/weather_layout_summary" />
+
+        <include
+            android:id="@+id/weather_recyclerview"
+            layout="@layout/weather_list_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/day_forecast" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

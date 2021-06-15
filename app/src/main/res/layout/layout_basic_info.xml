@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/weather_date_and_time" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/temperature_symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/degree_celsius_symbol"

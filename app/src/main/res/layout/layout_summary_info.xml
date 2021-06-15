@@ -22,18 +22,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:padding="32dp">
 
             <TextView
                 android:id="@+id/txt_wind"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/wind"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/txt_humidity"
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,28 +49,29 @@
                 app:layout_constraintStart_toStartOf="@+id/txt_wind"
                 app:layout_constraintTop_toBottomOf="@+id/txt_wind" />
 
+
             <TextView
                 android:id="@+id/txt_humidity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/humidity"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/txt_uv_index"
-                app:layout_constraintStart_toEndOf="@+id/txt_wind"
+                app:layout_constraintStart_toEndOf="@+id/tv_wind_value"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/txt_uv_index"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/uv_index"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txt_humidity"
+                app:layout_constraintStart_toEndOf="@+id/tv_humidity_value"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -91,14 +91,73 @@
                 android:id="@+id/txt_dew_point"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:text="@string/dew_point"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txt_uv_index"
                 app:layout_constraintStart_toStartOf="@+id/txt_uv_index"
+                app:layout_constraintTop_toBottomOf="@+id/txt_uv_index" />
+
+            <TextView
+                android:id="@+id/tv_wind_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_wind"
+                app:layout_constraintStart_toEndOf="@+id/txt_wind"
+                app:layout_constraintTop_toTopOf="@+id/txt_wind"
+                tools:text="4.7m/s SW" />
+
+            <TextView
+                android:id="@+id/tv_pressure_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_pressure"
+                app:layout_constraintStart_toEndOf="@+id/txt_pressure"
+                app:layout_constraintTop_toTopOf="@+id/txt_pressure"
+                tools:text="1008hPa" />
+
+            <TextView
+                android:id="@+id/tv_humidity_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_humidity"
+                app:layout_constraintTop_toTopOf="@+id/txt_humidity"
+                tools:text="63%" />
+
+            <TextView
+                android:id="@+id/tv_visibility_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_visibility"
+                app:layout_constraintStart_toEndOf="@+id/txt_visibility"
+                tools:text="10.0km" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2.3"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_uv_index"
+                app:layout_constraintStart_toEndOf="@+id/txt_uv_index"
+                app:layout_constraintTop_toTopOf="@+id/txt_uv_index" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="23°C"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_dew_point"
+                app:layout_constraintStart_toEndOf="@+id/txt_dew_point"
                 app:layout_constraintTop_toBottomOf="@+id/txt_uv_index" />
 
 
